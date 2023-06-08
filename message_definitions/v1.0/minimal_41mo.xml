@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<mavlink>
+  <include>minimal.xml</include>
+  <messages>
+    <message id="26" name="SCALED_IMU">
+      <description>The RAW IMU readings for the usual 9DOF sensor setup. This message should contain the scaled values to the described units</description>
+      <field type="uint32_t" name="time_boot_ms" units="ms">Timestamp (time since system boot).</field>
+      <field type="int16_t" name="xacc" units="mG">X acceleration</field>
+      <field type="int16_t" name="yacc" units="mG">Y acceleration</field>
+      <field type="int16_t" name="zacc" units="mG">Z acceleration</field>
+      <field type="int16_t" name="xgyro" units="mrad/s">Angular speed around X axis</field>
+      <field type="int16_t" name="ygyro" units="mrad/s">Angular speed around Y axis</field>
+      <field type="int16_t" name="zgyro" units="mrad/s">Angular speed around Z axis</field>
+      <field type="int16_t" name="xmag" units="mgauss">X Magnetic field</field>
+      <field type="int16_t" name="ymag" units="mgauss">Y Magnetic field</field>
+      <field type="int16_t" name="zmag" units="mgauss">Z Magnetic field</field>
+      <extensions/>
+      <field type="int16_t" name="temperature" units="cdegC">Temperature, 0: IMU does not provide temperature values. If the IMU is at 0C it must send 1 (0.01C).</field>
+    </message>
+  </messages>
+</mavlink>
